@@ -12,7 +12,7 @@ namespace ToDoListSln.Domain.Interfaces
 
         void Delete(Guid id);
 
-        void Update(ToDoList todoList);
+        void Update(Guid id);
 
         bool Exist(ToDoList todoList);
 

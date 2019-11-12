@@ -7,7 +7,7 @@ namespace ToDoListSln.Domain.Interfaces
     {
         void Add(ToDoListDto todoListDto);
 
-        void Update(ToDoListDto todoListDto);
+        void Update(Guid id);
 
         void Delete(Guid id);
     }

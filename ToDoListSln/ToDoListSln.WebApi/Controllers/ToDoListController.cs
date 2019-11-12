@@ -41,10 +41,10 @@ namespace ToDoListSln.WebApi.Controllers
             return Ok(StatusCodes.Status200OK);
         }
 
-        [HttpPatch]
-        public ActionResult Delete([FromBody]ToDoListDto toDoList)
+        [HttpPatch("{id}")]
+        public ActionResult Patch(string id)
         {
-            _toDoListAppService.Update(toDoList);
+            _toDoListAppService.Update(new Guid(id));
             return Ok(StatusCodes.Status200OK);
         }
     }
