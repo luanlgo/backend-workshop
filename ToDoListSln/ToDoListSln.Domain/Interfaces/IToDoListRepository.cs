@@ -12,6 +12,8 @@ namespace ToDoListSln.Domain.Interfaces
 
         void Delete(Guid id);
 
+        void Update(ToDoList todoList);
+
         bool Exist(ToDoList todoList);
 
     }

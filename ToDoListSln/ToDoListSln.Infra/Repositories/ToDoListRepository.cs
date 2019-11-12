@@ -36,6 +36,14 @@ namespace ToDoListSln.Infra.Repositories
             return _dbSet.Any(x => x.Conteudo.Equals(todoList.Conteudo) && x.Checado == todoList.Checado);
         }
 
+        public void Update(ToDoList todoList)
+        {
+            var data = _dbSet.Find(todoList.Id);
+            data.Conteudo = todoList.Conteudo;
+            data.Checado = todoList.Checado;
+            _context.Update(data);
+        }
+
         public List<ToDoList> Get()
         {
             return _dbSet.ToList();

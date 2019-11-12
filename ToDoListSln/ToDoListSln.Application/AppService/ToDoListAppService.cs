@@ -27,6 +27,11 @@ namespace ToDoListSln.Application.AppService
             _toDoListRepository.Add(_mapper.Map<ToDoList>(todoListDto));
         }
 
+        public void Update(ToDoListDto todoListDto)
+        {
+            _toDoListRepository.Update(_mapper.Map<ToDoList>(todoListDto));
+        }
+
         public void Delete(Guid id)
         {
             _toDoListRepository.Delete(id);
